@@ -1,86 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Your Name | Portfolio</title>
-  <style>
-    body { font-family: Arial, sans-serif; margin: 40px; background: #fafafa; color: #333; }
-    h1 { color: #007acc; }
-    section { margin-bottom: 30px; }
-    a { color: #007acc; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sonia Abbiyesuku | Data Analyst Portfolio</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Setting 'Inter' as the preferred font and a very clean background */
+        body { font-family: 'Inter', sans-serif; }
+        
+        /* Custom styling for horizontal scrolling aesthetics */
+        .horizontal-scroll-container::-webkit-scrollbar {
+            height: 8px;
+        }
+        .horizontal-scroll-container::-webkit-scrollbar-thumb {
+            background-color: #cbd5e1; /* Gray-300 */
+            border-radius: 4px;
+        }
+        .horizontal-scroll-container {
+            /* Enable momentum scrolling on iOS */
+            -webkit-overflow-scrolling: touch; 
+        }
+
+        /* Enforcing card sizing for mobile views */
+        .project-card {
+            min-width: 280px; /* Ensures the card is legible on small screens */
+            max-width: 280px; 
+        }
+    </style>
 </head>
-<body>
-  <h1>Hello, I'm Sonia Abbiyesuku - Data Analyst 👋</h1>
-  <div style="text-align:center;">
-  <img src="IMG_9243.jpeg" alt="Sonia Abbiyesuku" width="200" style="border-radius:50%; margin-top:10px;">
-</div>
-  <p>Welcome to my GitHub portfolio! I’m passionate about tech, data, and digital solutions.</p>
+<body class="bg-gray-100 p-4 sm:p-8">
 
-  <section>
-    <h2>💼 Projects</h2>
-    <ul>
+    <!-- Main Portfolio Container: Centered, Professional Card -->
+    <div class="max-w-5xl mx-auto bg-white shadow-2xl rounded-3xl p-6 md:p-12 border border-gray-100">
 
-<h2>📊 My Projects </h2>
-<p>Below are some of my data analysis projects highlighting my skills in Excel, SQL, Python, and Tableau.</p>
+        <!-- Header/Profile Section -->
+        <header class="mb-10 pb-6 border-b border-gray-200">
+            <div class="flex flex-col sm:flex-row items-center sm:items-start space-y-4 sm:space-y-0 sm:space-x-8">
+                
+                <!-- Profile Image -->
+                <div class="relative">
+                    <!-- Placeholder using initials "SA" as original image is local -->
+                    <img src="https://placehold.co/120x120/14b8a6/ffffff?text=SA" alt="Sonia Abbiyesuku" class="w-24 h-24 rounded-full object-cover shadow-lg border-4 border-white ring-2 ring-teal-500">
+                </div>
+                
+                <!-- Title and Introduction -->
+                <div class="text-center sm:text-left">
+                    <h1 class="text-4xl font-extrabold text-gray-800 tracking-tight">Sonia Abbiyesuku</h1>
+                    <p class="text-xl font-semibold text-teal-600 mt-1 mb-3">Data Analyst & Digital Solutions Enthusiast</p>
+                    <p class="text-gray-600 max-w-2xl">Welcome to my GitHub portfolio! I'm passionate about **tech, data, and digital solutions**, delivering insights that drive successful business strategies.</p>
+                </div>
+            </div>
+        </header>
 
-<div style="display:flex; gap:20px; overflow-x:auto; padding-bottom:10px;">
+        <!-- --- Projects Section --- -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                <span class="text-4xl mr-3">📊</span> My Projects
+            </h2>
 
-    <!-- Reduced width from 300px to 250px -->
-    <div style="width:250px; border:1px solid #ddd; border-radius:10px; padding:15px; box-shadow:0 3px 8px rgba(0,0,0,0.1); flex-shrink: 0;">
-        <h3>🧠 Sales Performance Dashboard</h3>
-        <p>Built an Excel-based dashboard to track regional sales trends and identify underperforming products.</p>
-        <p><b>Tools:</b> Excel, Tableau</p>
-    </div>
+            <!-- Horizontal Scroll Container for Project Cards -->
+            <div class="flex space-x-6 pb-4 overflow-x-auto horizontal-scroll-container">
 
-    <!-- Reduced width from 300px to 250px -->
-    <div style="width:250px; border:1px solid #ddd; border-radius:10px; padding:15px; box-shadow:0 3px 8px rgba(0,0,0,0.1); flex-shrink: 0;">
-        <h3>📈 Customer Retention Analysis</h3>
-        <p>Used Python and Pandas to analyze customer churn and visualize key retention metrics.</p>
-        <p><b>Tools:</b> Python, Pandas, Matplotlib</p>
-    </div>
+                <!-- Project Card 1: Sales Dashboard -->
+                <div class="project-card flex-shrink-0 bg-white border border-gray-200 rounded-xl p-6 shadow-xl hover:shadow-teal-200 transition duration-300 transform hover:-translate-y-0.5">
+                    <h3 class="text-xl font-bold text-indigo-600 mb-3 flex items-center">
+                        <span class="mr-2 text-2xl">🧠</span> Sales Performance Dashboard
+                    </h3>
+                    <p class="text-sm text-gray-700 mb-4">Built an Excel-based dashboard to track regional sales trends and identify underperforming products, enabling data-driven sales decisions.</p>
+                    <p class="text-xs font-semibold text-gray-500 pt-3 border-t border-gray-100">
+                        <span class="font-bold text-gray-800">Tools:</span> Excel, Tableau
+                    </p>
+                </div>
 
-    <!-- Reduced width from 300px to 250px -->
-    <div style="width:250px; border:1px solid #ddd; border-radius:10px; padding:15px; box-shadow:0 3px 8px rgba(0,0,0,0.1); flex-shrink: 0;">
-        <h3>🗂️ Student Performance Insights</h3>
-        <p>Analyzed school data using SQL to find performance patterns and improve grading insights.</p>
-        <p><b>Tools:</b> SQL, Excel</p>
-    </div>
-  
-    <h3>Python</h3>
-  </div>
+                <!-- Project Card 2: Customer Retention -->
+                <div class="project-card flex-shrink-0 bg-white border border-gray-200 rounded-xl p-6 shadow-xl hover:shadow-teal-200 transition duration-300 transform hover:-translate-y-0.5">
+                    <h3 class="text-xl font-bold text-indigo-600 mb-3 flex items-center">
+                        <span class="mr-2 text-2xl">📈</span> Customer Retention Analysis
+                    </h3>
+                    <p class="text-sm text-gray-700 mb-4">Employed Python and Pandas to analyze customer churn behavior and visualize key retention metrics, improving campaign targeting.</p>
+                    <p class="text-xs font-semibold text-gray-500 pt-3 border-t border-gray-100">
+                        <span class="font-bold text-gray-800">Tools:</span> Python, Pandas, Matplotlib
+                    </p>
+                </div>
 
-  <div class="skill-card">
-    <h3>SQL</h3>
-  </div>
-  
-  <div class="skill-card">
-    <h3>Excel</h3>
-  </div>
+                <!-- Project Card 3: Student Insights -->
+                <div class="project-card flex-shrink-0 bg-white border border-gray-200 rounded-xl p-6 shadow-xl hover:shadow-teal-200 transition duration-300 transform hover:-translate-y-0.5">
+                    <h3 class="text-xl font-bold text-indigo-600 mb-3 flex items-center">
+                        <span class="mr-2 text-2xl">🗂️</span> Student Performance Insights
+                    </h3>
+                    <p class="text-sm text-gray-700 mb-4">Analyzed school data using SQL queries to find performance patterns and build reports for targeted educational improvements.</p>
+                    <p class="text-xs font-semibold text-gray-500 pt-3 border-t border-gray-100">
+                        <span class="font-bold text-gray-800">Tools:</span> SQL, Excel
+                    </p>
+                </div>
 
-  <div class="skill-card">
-    <h3>Tableau</h3>
-  </div>
-  
-  <div class="skill-card">
-    <h3>HTML</h3>
-  </div>
+            </div>
+        </section>
 
-  <div class="skill-card">
-    <h3>CSS</h3>
-  </div>
+        <!-- --- Skills Section --- -->
+        <section class="mb-12">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                <span class="text-4xl mr-3">💡</span> Technical Skills
+            </h2>
 
-  <div class="skill-card">
-    <h3>Git</h3>
-  </div>
+            <!-- Horizontal Scroll Container for Skill Pills -->
+            <div class="flex flex-wrap sm:flex-nowrap space-x-3 space-y-3 sm:space-y-0 pb-4 overflow-x-auto horizontal-scroll-container">
 
-  <section>
-    <h2>📫 Contact: +2348107582377</h2>
-    <p>Email: soniawanimim08107@gmail.com<br>
-    LinkedIn: <a href="https://www.linkedin.com/in/nimi-abbiyesuku-631353263?">linkedin.com/in/nimiabbiyesuku</a><br>
-    GitHub: <a href="https://soniaabbiyesuku.github.io">github.io/soniaabbiyesuku</a></p>
-  </section>
+                <!-- Skill Pills - Stylish, Card-like Look -->
+                <span class="flex-shrink-0 bg-teal-50 text-teal-800 font-semibold text-sm px-5 py-2 rounded-full shadow-md border border-teal-200 transition duration-150 hover:bg-teal-100">Python</span>
+                <span class="flex-shrink-0 bg-teal-50 text-teal-800 font-semibold text-sm px-5 py-2 rounded-full shadow-md border border-teal-200 transition duration-150 hover:bg-teal-100">SQL</span>
+                <span class="flex-shrink-0 bg-teal-50 text-teal-800 font-semibold text-sm px-5 py-2 rounded-full shadow-md border border-teal-200 transition duration-150 hover:bg-teal-100">Excel</span>
+                <span class="flex-shrink-0 bg-teal-50 text-teal-800 font-semibold text-sm px-5 py-2 rounded-full shadow-md border border-teal-200 transition duration-150 hover:bg-teal-100">Tableau</span>
+                <span class="flex-shrink-0 bg-teal-50 text-teal-800 font-semibold text-sm px-5 py-2 rounded-full shadow-md border border-teal-200 transition duration-150 hover:bg-teal-100">HTML</span>
+                <span class="flex-shrink-0 bg-teal-50 text-teal-800 font-semibold text-sm px-5 py-2 rounded-full shadow-md border border-teal-200 transition duration-150 hover:bg-teal-100">CSS</span>
+                <span class="flex-shrink-0 bg-teal-50 text-teal-800 font-semibold text-sm px-5 py-2 rounded-full shadow-md border border-teal-200 transition duration-150 hover:bg-teal-100">Git</span>
+
+            </div>
+        </section>
+
+        <!-- --- Contact Section --- -->
+        <section class="pt-6 border-t border-gray-200">
+            <h2 class="text-3xl font-bold text-gray-800 mb-6 flex items-center">
+                <span class="text-4xl mr-3">📞</span> Connect With Me
+            </h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-gray-700">
+                
+                <div class="space-y-3">
+                    <p class="flex items-center">
+                        <span class="font-bold w-24">Phone:</span> +2348107582377
+                    </p>
+                    <p class="flex items-center">
+                        <span class="font-bold w-24">Email:</span> 
+                        <a href="mailto:soniawanimim08107@gmail.com" class="text-teal-600 hover:text-teal-700 transition duration-150">soniawanimim08107@gmail.com</a>
+                    </p>
+                </div>
+
+                <div class="space-y-3">
+                    <p class="flex items-center">
+                        <span class="font-bold w-24">LinkedIn:</span> 
+                        <a href="https://www.linkedin.com/in/nimi-abbiyesuku-631353263?" target="_blank" class="text-teal-600 hover:text-teal-700 transition duration-150">nimi-abbiyesuku</a>
+                    </p>
+                    <p class="flex items-center">
+                        <span class="font-bold w-24">GitHub:</span> 
+                        <a href="https://soniaabbiyesuku.github.io" target="_blank" class="text-teal-600 hover:text-teal-700 transition duration-150">soniaabbiyesuku.github.io</a>
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
 </body>
 </html>
